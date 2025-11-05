@@ -5,49 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sana Luxury Makeover</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Playfair Display', serif;
-    }
-    .gold {
-      color: #c5a049;
-    }
-    .fade {
-      transition: opacity 1s ease-in-out;
-    }
+    body { font-family: 'Playfair Display', serif; }
+    .gold { color: #c5a049; }
+    .fade { transition: opacity 1s ease-in-out; }
+    .hero-img { transition: transform 1s ease, opacity 1s ease; }
   </style>
 </head>
 <body class="overflow-x-hidden bg-white text-gray-900">
 
-  <!-- Navbar -->
-  <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-    <div class="max-w-7xl mx-auto flex justify-between items-center px-5 py-3">
-      <h1 class="text-2xl md:text-3xl font-bold gold">Sana Luxury Makeover</h1>
-      <nav class="hidden md:flex space-x-8 font-medium">
-        <a href="#" class="hover:text-[#c5a049]">Home</a>
-        <a href="#about" class="hover:text-[#c5a049]">About</a>
-        <a href="#services" class="hover:text-[#c5a049]">Services</a>
-        <a href="#gallery" class="hover:text-[#c5a049]">Gallery</a>
-        <a href="#contact" class="hover:text-[#c5a049]">Contact</a>
-      </nav>
-    </div>
-  </header>
+<!-- Navbar -->
+<header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-5 py-3">
+    <h1 class="text-2xl md:text-3xl font-bold gold">Sana Luxury Makeover</h1>
+    <nav class="hidden md:flex space-x-8 font-medium">
+      <a href="#" class="hover:text-[#c5a049]">Home</a>
+      <a href="#about" class="hover:text-[#c5a049]">About</a>
+      <a href="#services" class="hover:text-[#c5a049]">Services</a>
+      <a href="#gallery" class="hover:text-[#c5a049]">Gallery</a>
+      <a href="#contact" class="hover:text-[#c5a049]">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- Hero Section -->
+<!-- Hero Section -->
 <section class="relative w-full h-screen md:h-[90vh] mt-16 overflow-hidden min-h-[500px]">
-  <!-- Images (replace with your own URLs) -->
   <div class="hero relative w-full h-full">
     <img src="s1.jpg" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 fade hero-img">
     <img src="s2.jpg" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 fade hero-img">
     <img src="s3.jpg" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 fade hero-img">
-
     <div class="absolute inset-0 bg-black bg-opacity-40"></div>
 
     <!-- Text Overlay -->
     <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4 z-10">
-      <h2 class="text-4xl md:text-6xl font-bold mb-3">Redefine Your Elegance</h2>
-      <p class="text-lg md:text-xl mb-6">Luxury. Confidence. Class.</p>
-      <a href="#contact" class="bg-[#c5a049] text-white px-6 py-3 rounded-lg hover:bg-[#b8963b] transition">Book Appointment</a>
+      <h2 class="text-4xl md:text-6xl font-bold mb-3 aos-init aos-animate" data-aos="fade-down" data-aos-duration="1500">Redefine Your Elegance</h2>
+      <p class="text-lg md:text-xl mb-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">Luxury. Confidence. Class.</p>
     </div>
 
     <!-- Arrows -->
@@ -55,40 +48,121 @@
     <button id="next" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/70 hover:bg-white text-gray-800 p-3 rounded-full z-20">&#10095;</button>
   </div>
 
-  <!-- “Book Appointment” Side Tab -->
+  <!-- Book Appointment Side Tab -->
   <a href="#contact" class="hidden md:flex items-center justify-center absolute right-0 top-1/3 bg-[#c5a049] text-white font-semibold px-3 py-2 rotate-90 origin-bottom-left rounded-t-lg shadow-lg hover:bg-[#b8963b] transition">
     Book Appointment
   </a>
 </section>
 
+<!-- About Section -->
+<section id="about" class="relative w-full bg-white py-20 px-5 md:px-20">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    <div class="md:w-1/2 w-full aos-init aos-animate" data-aos="fade-right" data-aos-duration="1500">
+      <img src="nehal.jpg" alt="SNA Luxury Makeovers by Nehal" class="w-full h-full object-cover rounded-xl shadow-lg transform transition duration-1000 hover:scale-105">
+    </div>
+    <div class="md:w-1/2 w-full text-gray-900 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500">
+      <h2 class="text-3xl md:text-5xl font-bold gold mb-4">SNA Luxury Makeovers by Nehal</h2>
+      <p class="text-lg md:text-xl mb-4">Luxury Bridal Makeup Artist | Lucknow · Delhi · Jaipur</p>
+      <p class="text-md md:text-lg mb-4">Nehal is a celebrity MUA, educator, and one of U.P.'s leading bridal makeup experts with over 9 years of experience. Recognized for completing 30 bridal looks in just 6 hours, he brings precision, artistry, and elegance to every client he works with.</p>
+      <p class="text-md md:text-lg mb-4">Specializing in bridal and luxury makeup, Nehal has built a reputation for flawless transformations using the finest products, sophisticated techniques, and a keen eye for detail. His clients include high-profile celebrities, brides, and makeup enthusiasts seeking premium experiences.</p>
+      <p class="text-md md:text-lg mb-4">With expertise across Lucknow, Delhi, and Jaipur, SNA Luxury Makeovers by Nehal ensures every client enjoys a personalized, high-end pampering session designed to highlight their natural beauty and elegance.</p>
+      <a href="#contact" class="inline-block mt-4 bg-[#c5a049] text-white px-6 py-3 rounded-lg hover:bg-[#b8963b] transition font-semibold">Book Appointment</a>
+    </div>
+  </div>
+</section>
 
-  <!-- Script for Slider -->
-  <script>
-    let current = 0;
-    const slides = document.querySelectorAll('.hero-img');
-    const total = slides.length;
+<!-- Deals Section -->
+<section id="deals" class="relative w-full bg-gray-50 py-20 px-5 md:px-20">
+  <h2 class="text-3xl md:text-5xl font-bold gold text-center mb-12 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">Deals of the Month</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border-2 border-[#c5a049] aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+      <img src="s8.jpg" alt="Bridal Makeup Package" class="w-full h-52 md:h-64 object-cover object-center transform transition duration-1000 hover:scale-105">
+      <div class="p-6 flex flex-col justify-between flex-1">
+        <div>
+          <h3 class="text-2xl font-semibold mb-2">Bridal Makeup Package</h3>
+          <p class="text-gray-700 mb-4">Luxury bridal look with premium products and flawless finish.</p>
+          <p class="text-gray-900 font-bold mb-4">₹4999</p>
+        </div>
+        <a href="#" class="mt-auto bg-[#c5a049] text-white px-4 py-2 rounded-lg font-semibold text-center transition hover:bg-white hover:text-[#c5a049] border-2 border-[#c5a049]">Book Appointment</a>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border-2 border-[#c5a049] aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+      <img src="s4.jpg" alt="Party Glam Package" class="w-full h-52 md:h-64 object-cover object-center transform transition duration-1000 hover:scale-105">
+      <div class="p-6 flex flex-col justify-between flex-1">
+        <div>
+          <h3 class="text-2xl font-semibold mb-2">Party Glam Package</h3>
+          <p class="text-gray-700 mb-4">Elegant party look with highlight and contour, perfect for events.</p>
+          <p class="text-gray-900 font-bold mb-4">₹2999</p>
+        </div>
+        <a href="#" class="mt-auto bg-[#c5a049] text-white px-4 py-2 rounded-lg font-semibold text-center transition hover:bg-white hover:text-[#c5a049] border-2 border-[#c5a049]">Book Appointment</a>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border-2 border-[#c5a049] aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+      <img src="s6.jpg" alt="Hair & Skincare Combo" class="w-full h-52 md:h-64 object-cover object-center transform transition duration-1000 hover:scale-105">
+      <div class="p-6 flex flex-col justify-between flex-1">
+        <div>
+          <h3 class="text-2xl font-semibold mb-2">Hair & Skincare Combo</h3>
+          <p class="text-gray-700 mb-4">Complete pampering session for hair and skin rejuvenation.</p>
+          <p class="text-gray-900 font-bold mb-4">₹1999</p>
+        </div>
+        <a href="#" class="mt-auto bg-[#c5a049] text-white px-4 py-2 rounded-lg font-semibold text-center transition hover:bg-white hover:text-[#c5a049] border-2 border-[#c5a049]">Book Appointment</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    function showSlide(index) {
-      slides.forEach((img, i) => {
-        img.style.opacity = i === index ? 1 : 0;
-      });
-    }
+<!-- Gallery Section -->
+<section id="gallery" class="relative w-full bg-gray-50 py-20 px-5 md:px-20">
+  <h2 class="text-3xl md:text-5xl font-bold gold text-center mb-12 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">Our Makeup Looks</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+    <div class="overflow-hidden rounded-xl shadow-lg aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1200">
+      <img src="s1.jpg" alt="Bridal Look 1" class="w-full h-64 object-cover object-center transform transition duration-1000 hover:scale-105">
+    </div>
+    <div class="overflow-hidden rounded-xl shadow-lg aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="100">
+      <img src="s2.jpg" alt="Bridal Look 2" class="w-full h-64 object-cover object-center transform transition duration-1000 hover:scale-105">
+    </div>
+    <div class="overflow-hidden rounded-xl shadow-lg aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="200">
+      <img src="s3.jpg" alt="Bridal Look 3" class="w-full h-64 object-cover object-center transform transition duration-1000 hover:scale-105">
+    </div>
+    <div class="overflow-hidden rounded-xl shadow-lg aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="300">
+      <img src="s4.jpg" alt="Bridal Look 4" class="w-full h-64 object-cover object-center transform transition duration-1000 hover:scale-105">
+    </div>
+    <div class="overflow-hidden rounded-xl shadow-lg aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="400">
+      <img src="s5.jpg" alt="Bridal Look 5" class="w-full h-64 object-cover object-center transform transition duration-1000 hover:scale-105">
+    </div>
+    <div class="overflow-hidden rounded-xl shadow-lg aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="500">
+      <img src="s6.jpg" alt="Bridal Look 6" class="w-full h-64 object-cover object-center transform transition duration-1000 hover:scale-105">
+    </div>
+  </div>
+</section>
 
-    document.getElementById('next').addEventListener('click', () => {
-      current = (current + 1) % total;
-      showSlide(current);
-    });
+<!-- Slider Script -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({ once: true, easing: 'ease-out-cubic' });
 
-    document.getElementById('prev').addEventListener('click', () => {
-      current = (current - 1 + total) % total;
-      showSlide(current);
-    });
-
-    setInterval(() => {
-      current = (current + 1) % total;
-      showSlide(current);
-    }, 4000);
-  </script>
+let current = 0;
+const slides = document.querySelectorAll('.hero-img');
+const total = slides.length;
+function showSlide(index) {
+  slides.forEach((img, i) => {
+    img.style.opacity = i === index ? 1 : 0;
+    img.style.transform = i === index ? 'scale(1.05)' : 'scale(1)';
+  });
+}
+document.getElementById('next').addEventListener('click', () => {
+  current = (current + 1) % total;
+  showSlide(current);
+});
+document.getElementById('prev').addEventListener('click', () => {
+  current = (current - 1 + total) % total;
+  showSlide(current);
+});
+setInterval(() => {
+  current = (current + 1) % total;
+  showSlide(current);
+}, 4000);
+</script>
 
 </body>
 </html>
